@@ -19,25 +19,38 @@
     twitter-user {
       margin: 8px;
     }
-
-    twitter-user.blue {
-      --twitter-user-background-color: #03A9F4;
-    }
   </style>
 </head>
 <body>
-  <twitter-user></twitter-user>
+  <twitter-user id="jack"></twitter-user>
 
-  <twitter-user></twitter-user>
+  <twitter-user id="abraham"></twitter-user>
 
-  <twitter-user>Slot content</twitter-user>
+  <twitter-user id="interior"></twitter-user>
 
-  <twitter-user class="blue"></twitter-user>
+  <twitter-user id="devbraham"></twitter-user>
 
   <script>
-    /** Set complex properties */
-    // document.querySelector('<twitter-user>').user = User;
-
+    fetch('test/jack.json')
+      .then(res => res.json())
+      .then(data => {
+        document.querySelector('#jack').user = data;
+      });
+    fetch('test/abraham.json')
+      .then(res => res.json())
+      .then(data => {
+        document.querySelector('#abraham').user = data;
+      });
+    fetch('test/interior.json')
+      .then(res => res.json())
+      .then(data => {
+        document.querySelector('#interior').user = data;
+      });
+    fetch('test/devbraham.json')
+      .then(res => res.json())
+      .then(data => {
+        document.querySelector('#devbraham').user = data;
+      });
   </script>
 
   <!-- In development `twitter-user.bundled.js` will automatically be loaded. -->
