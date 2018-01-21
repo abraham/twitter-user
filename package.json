@@ -1,0 +1,39 @@
+{
+  "name": "twitter-user",
+  "version": "0.1.0",
+  "description": "Generated Nutmeg Web Component",
+  "main": "dist/twitter-user.js",
+  "module": "dist/twitter-user.js",
+  "unpkg": "dist/twitter-user.min.js",
+  "types": "dist/twitter-user.d.ts",
+  "directories": {
+    "test": "test"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "keywords": [
+    "twitter-user",
+    "nutmeg"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "npx nutmeg build .",
+    "build:production": "npx nutmeg build . --production",
+    "prebuild": "npx nutmeg clean .",
+    "prepare": "npm run build:production",
+    "pretest": "npm run build",
+    "serve": "npx nutmeg serve .",
+    "test": "npx nutmeg test .",
+    "watch": "npx nutmeg watch ."
+  },
+  "dependencies": {
+    "@nutmeg/seed": "0.4.2"
+  },
+  "devDependencies": {
+    "@nutmeg/cli": "0.9.6",
+    "@types/chai": "4.1.1",
+    "@types/mocha": "2.2.46",
+    "@webcomponents/webcomponentsjs": "1.0.22"
+  }
+}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>twitter-user demos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://nutmeg.tools/favicon.png">
+
+  <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-sd-ce.js"></script>
+
+  <!-- Use `npm run serve` to start a development server. -->
+
+  <style>
+    body {
+      background-color: #eee;
+      padding: 24px;
+    }
+
+    twitter-user {
+      margin: 8px;
+    }
+
+    twitter-user.blue {
+      --twitter-user-background-color: #03A9F4;
+    }
+  </style>
+</head>
+<body>
+  <twitter-user></twitter-user>
+
+  <twitter-user></twitter-user>
+
+  <twitter-user>Slot content</twitter-user>
+
+  <twitter-user class="blue"></twitter-user>
+
+  <script>
+    /** Set complex properties */
+    // document.querySelector('<twitter-user>').user = User;
+
+  </script>
+
+  <!-- In development `twitter-user.bundled.js` will automatically be loaded. -->
+</body>
+</html>
