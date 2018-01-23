@@ -49,6 +49,6 @@
     "@types/mocha": "2.2.46",
     "@types/numeral": "0.0.22",
     "@types/twitter-text": "2.0.0",
-    "@webcomponents/webcomponentsjs": "1.0.22"
+    "@webcomponents/webcomponentsjs": "1.1.0"
   }
 }
