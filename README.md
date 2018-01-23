@@ -56,6 +56,8 @@ Looking for a way to embed tweets? Check out [&lt;twitter-status&gt;](https://gi
 License
 ----
 
-TwitterStatus is released under an MIT license.
+TwitterUser is released under an MIT license.
+
+TwitterUser is not affiliated Twitter, Inc.
 
 Built, tested, and published with [Nutmeg](https://nutmeg.tools).
