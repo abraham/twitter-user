@@ -1,6 +1,5 @@
 import { autoLink, AutoLinkOptions, htmlEscape, UrlEntity } from 'twitter-text';
-import { Seed, Property, html, TemplateResult } from '@nutmeg/seed';
-import { svg, render } from 'lit-html';
+import { Seed, Property, html, svg, TemplateResult } from '@nutmeg/seed';
 import { unsafeHTML } from 'lit-html/lib/unsafe-html';
 import * as numeral from 'numeral';
 
