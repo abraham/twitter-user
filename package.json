@@ -1,6 +1,6 @@
 {
   "name": "twitter-user",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Twitter User Web Component",
   "main": "dist/twitter-user.js",
   "module": "dist/twitter-user.js",
