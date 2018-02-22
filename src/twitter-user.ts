@@ -1,7 +1,7 @@
-import { autoLink, AutoLinkOptions, htmlEscape, UrlEntity } from 'twitter-text';
 import { Seed, Property, html, svg, TemplateResult } from '@nutmeg/seed';
+import approximateNumber from 'approximate-number';
 import { unsafeHTML } from 'lit-html/lib/unsafe-html';
-import * as numeral from 'numeral';
+import { autoLink, AutoLinkOptions, htmlEscape, UrlEntity } from 'twitter-text';
 
 import { User, UserData } from './user';
 
@@ -88,13 +88,7 @@ export class TwitterUser extends Seed {
   }
 
   private countDisplay(count: number): string {
-    if (count < 1000) {
-      return String(count);
-    } else if (count < 100000) {
-      return numeral(count).format('0a');
-    } else {
-      return numeral(count).format('0.00a');
-    }
+    return approximateNumber(count);
   }
 
   private get mediaStyle(): TemplateResult {
