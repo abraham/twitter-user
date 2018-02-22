@@ -61,7 +61,7 @@ describe('<twitter-user>', () => {
     });
 
     it('renders counts', () => {
-      expect(component.$('#counts').innerText.trim()).to.eq('Tweets\n45k\nFollowing\n401\nFollowers\n8k\nLikes\n16k\nLists\n582');
+      expect(component.$('#counts').innerText.trim()).to.eq('Tweets\n44k\nFollowing\n401\nFollowers\n8.1k\nLikes\n15k\nLists\n582');
     });
 
     it('has count links', () => {
