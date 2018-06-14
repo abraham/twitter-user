@@ -40,7 +40,7 @@
   "dependencies": {
     "@nutmeg/seed": "0.10.0",
     "approximate-number": "2.0.0",
-    "lit-html": "0.10.0",
+    "lit-html": "0.10.2",
     "twitter-text": "2.0.4"
   },
   "devDependencies": {
