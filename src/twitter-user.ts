@@ -6,10 +6,10 @@ import { autoLink, AutoLinkOptions, htmlEscape, UrlEntity } from 'twitter-text';
 import { User, UserData } from './user';
 
 export class TwitterUser extends Seed {
-  @Property() public user: UserData;
+  @Property() public user!: UserData;
 
   private readonly months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  private _user_cache: User;
+  private _user_cache!: User;
 
   constructor() {
     super();
