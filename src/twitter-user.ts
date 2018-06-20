@@ -6,10 +6,10 @@ import { autoLink, AutoLinkOptions, htmlEscape, UrlEntity } from 'twitter-text';
 import { User, UserData } from './user';
 
 export class TwitterUser extends Seed {
-  @Property() public user: UserData;
+  @Property() public user!: UserData;
 
   private readonly months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  private _user_cache: User;
+  private _user_cache!: User;
 
   constructor() {
     super();
@@ -89,17 +89,6 @@ export class TwitterUser extends Seed {
 
   private countDisplay(count: number): string {
     return approximateNumber(count);
-  }
-
-  private get mediaStyle(): TemplateResult {
-    if (this._user) {
-      return html`
-        background-color: ${this._user.backgroundColor};
-        background-image: url('${this._user.bannerUrl}');
-      `;
-    } else {
-      return html``;
-    }
   }
 
   /** Styling for the component. */

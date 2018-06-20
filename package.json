@@ -33,18 +33,18 @@
     "prebuild": "npx nutmeg clean .",
     "prepare": "npm run build -- --production",
     "pretest": "npm run build",
-    "serve": "npx nutmeg serve .",
+    "start": "npx nutmeg serve .",
     "test": "npx nutmeg test .",
     "watch": "npx nutmeg watch ."
   },
   "dependencies": {
-    "@nutmeg/seed": "0.10.0",
+    "@nutmeg/seed": "0.12.1",
     "approximate-number": "2.0.0",
-    "lit-html": "0.10.0",
+    "lit-html": "0.10.2",
     "twitter-text": "2.0.4"
   },
   "devDependencies": {
-    "@nutmeg/cli": "0.13.0",
+    "@nutmeg/cli": "0.15.0",
     "@types/numeral": "0.0.22",
     "@types/twitter-text": "2.0.0"
   }
