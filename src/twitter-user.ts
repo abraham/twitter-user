@@ -91,17 +91,6 @@ export class TwitterUser extends Seed {
     return approximateNumber(count);
   }
 
-  private get mediaStyle(): TemplateResult {
-    if (this._user) {
-      return html`
-        background-color: ${this._user.backgroundColor};
-        background-image: url('${this._user.bannerUrl}');
-      `;
-    } else {
-      return html``;
-    }
-  }
-
   /** Styling for the component. */
   public get styles(): TemplateResult {
     return html`
