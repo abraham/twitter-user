@@ -36,7 +36,7 @@ describe('<twitter-user>', () => {
     });
 
     it('renders links with user color', () => {
-      expect(getComputedStyle(component.$('#header a')).color).to.eq('rgb(56, 175, 255)');
+      expect(getComputedStyle(component.$('#header a')).color).to.eq('rgb(28, 148, 224)');
     });
 
     it('renders banner image', () => {
