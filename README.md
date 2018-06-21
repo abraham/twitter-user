@@ -12,7 +12,7 @@ Twitter User Web Component
 Examples
 ----
 
-[Live demo](https://codepen.io/abrahamwilliams/pen/dJaEpq)
+[Live demo](https://codepen.io/abraham/pen/dJaEpq)
 
 ![Example](/images/jack.png)
 ![Example with description](/images/abraham.png)
