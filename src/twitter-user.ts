@@ -1,7 +1,7 @@
 import { Seed, Property, html, svg, TemplateResult } from '@nutmeg/seed';
 import approximateNumber from 'approximate-number';
 import { unsafeHTML } from 'lit-html/lib/unsafe-html';
-import { autoLink, AutoLinkOptions, htmlEscape, UrlEntity } from 'twitter-text';
+import { autoLink, AutoLinkOptions, UrlEntity } from 'twitter-text';
 
 import { User, UserData } from './user';
 
@@ -59,8 +59,8 @@ export class TwitterUser extends Seed {
     };
   }
 
-  private get unsafeLinkedText() {
-    return unsafeHTML(autoLink(htmlEscape(this._user.description), this.autoLinkOptions));
+  private get linkedText() {
+    return unsafeHTML(autoLink(this._user.description, this.autoLinkOptions));
   }
 
   private get logoTemplate(): TemplateResult {
@@ -292,7 +292,7 @@ export class TwitterUser extends Seed {
     }
     return html`
       <div id="text">
-        ${this.unsafeLinkedText}
+        ${this.linkedText}
       </div>
     `;
   }
