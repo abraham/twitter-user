@@ -1,12 +1,11 @@
-import { Seed, Property, html, svg, TemplateResult } from '@nutmeg/seed';
+import { html, Property, Seed, svg, TemplateResult } from '@nutmeg/seed';
 import approximateNumber from 'approximate-number';
 import { unsafeHTML } from 'lit-html/lib/unsafe-html';
 import { autoLink, AutoLinkOptions, UrlEntity } from 'twitter-text';
-
-import { User, UserData } from './user';
+import { User } from './user';
 
 export class TwitterUser extends Seed {
-  @Property() public user!: UserData;
+  @Property() public user!: import('twitter-d').User;
 
   private readonly months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   private _user_cache!: User;
@@ -53,10 +52,13 @@ export class TwitterUser extends Seed {
   }
 
   private get autoLinkOptions(): AutoLinkOptions {
-    return {
+    let options: AutoLinkOptions = {
       targetBlank: true,
-      urlEntities: this._user.entities.urls as UrlEntity[]
     };
+    if (this._user.entities.url && this._user.entities.url.urls) {
+      options.urlEntities = this._user.entities.url.urls as UrlEntity[];
+    }
+    return options;
   }
 
   private get linkedText() {
