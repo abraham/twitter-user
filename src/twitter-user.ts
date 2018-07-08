@@ -1,12 +1,11 @@
 import { html, Property, Seed, svg, TemplateResult } from '@nutmeg/seed';
 import approximateNumber from 'approximate-number';
 import { unsafeHTML } from 'lit-html/lib/unsafe-html';
-import { User as UserData } from 'twitter-d';
 import { autoLink, AutoLinkOptions, UrlEntity } from 'twitter-text';
 import { User } from './user';
 
 export class TwitterUser extends Seed {
-  @Property() public user!: UserData;
+  @Property() public user!: import('twitter-d').User;
 
   private readonly months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   private _user_cache!: User;
