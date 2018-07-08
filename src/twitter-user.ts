@@ -1,9 +1,9 @@
-import { Seed, Property, html, svg, TemplateResult } from '@nutmeg/seed';
+import { html, Property, Seed, svg, TemplateResult } from '@nutmeg/seed';
 import approximateNumber from 'approximate-number';
 import { unsafeHTML } from 'lit-html/lib/unsafe-html';
+import { User as UserData } from 'twitter-d';
 import { autoLink, AutoLinkOptions, UrlEntity } from 'twitter-text';
-
-import { User, UserData } from './user';
+import { User } from './user';
 
 export class TwitterUser extends Seed {
   @Property() public user!: UserData;
@@ -53,10 +53,13 @@ export class TwitterUser extends Seed {
   }
 
   private get autoLinkOptions(): AutoLinkOptions {
-    return {
+    let options: AutoLinkOptions = {
       targetBlank: true,
-      urlEntities: this._user.entities.urls as UrlEntity[]
     };
+    if (this._user.entities.url && this._user.entities.url.urls) {
+      options.urlEntities = this._user.entities.url.urls as UrlEntity[];
+    }
+    return options;
   }
 
   private get linkedText() {
