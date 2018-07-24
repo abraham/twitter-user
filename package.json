@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "@nutmeg/cli": "0.15.0",
-    "@types/numeral": "0.0.24",
+    "@types/numeral": "0.0.25",
     "@types/twitter-text": "2.0.0",
     "twitter-d": "0.1.1"
   }
