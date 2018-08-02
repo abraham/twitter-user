@@ -6,6 +6,7 @@
 [![Linux Build Status](https://img.shields.io/travis/abraham/twitter-user.svg?style=flat&label=linux)](https://travis-ci.org/abraham/twitter-user)
 [![Windows Build Status](https://img.shields.io/appveyor/ci/abraham/twitter-user.svg?style=flat&label=windows)](https://ci.appveyor.com/project/abraham/twitter-user)
 [![Dependency Status](https://david-dm.org/abraham/twitter-user.svg?style=flat)](https://david-dm.org/abraham/twitter-user)
+[![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/twitter-user.svg?style=flat&colorB=4bc524)](https://bundlephobia.com/result?p=twitter-user)
 
 Twitter User Web Component
 
