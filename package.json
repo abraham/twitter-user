@@ -41,12 +41,12 @@
     "@nutmeg/seed": "0.13.0",
     "approximate-number": "2.0.0",
     "lit-html": "0.10.2",
-    "twitter-text": "3.0.0"
+    "twitter-text": "3.1.0"
   },
   "devDependencies": {
     "@nutmeg/cli": "0.15.0",
     "@types/numeral": "0.0.26",
-    "@types/twitter-text": "2.0.0",
+    "@types/twitter-text": "3.1.5",
     "twitter-d": "0.6.0"
   }
 }
